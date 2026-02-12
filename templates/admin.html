@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Admin Dashboard</h2>
+    <h3>Registered Users</h3>
+    <ul>
+        {% for user, data in users.items() %}
+            <li>{{ user }} - {{ data.role }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/logout">Logout</a>
+</div>
+</body>
+</html>
